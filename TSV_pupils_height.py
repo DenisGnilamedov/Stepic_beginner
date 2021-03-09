@@ -14,8 +14,13 @@ for grade, pupil, height in stat:
 for grade in grades:
     if not (grades[grade]):
         grades[grade] = '-'
-for grade, mid in grades.items():
-    print(grade, mid, end='\n')
+
+with open(r"C:\1\result.txt", "a") as ouf:
+    for grade, mid in grades.items():
+        ouf.write(str(grade) + ' ' + str(mid) + '\n')
+
+
+#print(grade, mid, end='\n')
 
 
 
